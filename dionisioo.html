@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Supermercado Dionisio - O melhor lugar para suas compras. Delivery via WhatsApp em Santa Quitéria. Ofertas imperdíveis todos os dias!">
+<meta name="keywords" content="supermercado, delivery, Santa Quitéria, Dionisio, ofertas, compras online">
+<meta property="og:title" content="Supermercado Dionisio - O melhor lugar para suas compras">
+<meta property="og:description" content="Delivery rápido pelo WhatsApp. Açougue, hortifruti, padaria e muito mais!">
+<title>Supermercado Dionisio | O melhor lugar para suas compras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --blue: #1565C0;
+  --blue-dark: #0D47A1;
+  --blue-light: #1E88E5;
+  --red: #D32F2F;
+  --red-light: #EF5350;
+  --yellow: #FDD835;
+  --yellow-dark: #F9A825;
+  --white: #FFFFFF;
+  --gray-light: #F5F7FA;
+  --gray: #ECEFF1;
+  --gray-mid: #90A4AE;
+  --text-dark: #1A237E;
+  --text-body: #37474F;
+  --green-wa: #25D366;
+  --green-wa-dark: #128C7E;
+  --radius: 16px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 24px rgba(21,101,192,0.10);
+  --shadow-lg: 0 8px 40px rgba(21,101,192,0.18);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text-body);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+/* ============ HEADER ============ */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: 0 2px 16px rgba(21,101,192,0.12);
+  transition: box-shadow 0.3s;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  gap: 16px;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 46px; height: 46px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  color: var(--yellow);
+  font-weight: 900;
+  box-shadow: 0 2px 8px rgba(21,101,192,0.25);
+  font-family: 'Baloo 2', cursive;
+  letter-spacing: -1px;
+}
+
+.logo-text {
+  display: flex; flex-direction: column; line-height: 1.1;
+}
+
+.logo-text strong {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.1rem;
+  color: var(--blue-dark);
+  font-weight: 800;
+}
+
+.logo-text span {
+  font-size: 0.65rem;
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+nav { display: flex; gap: 4px; }
+nav a {
+  text-decoration: none;
+  color: var(--text-body);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+nav a:hover { background: var(--gray-light); color: var(--blue); }
+
+.header-actions { display: flex; align-items: center; gap: 10px; }
+
+.btn-wa-header {
+  background: var(--green-wa);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 9px 18px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 7px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.btn-wa-header:hover { background: var(--green-wa-dark); transform: scale(1.04); }
+
+.btn-insta {
+  width: 38px; height: 38px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+.btn-insta:hover { transform: scale(1.1); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none; border: none;
+}
+.hamburger span {
+  display: block; width: 24px; height: 2.5px;
+  background: var(--blue-dark); border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ============ HERO ============ */
+#hero {
+  margin-top: 70px;
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 50%, #1976D2 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  display: flex; align-items: center;
+}
+
+.hero-bg-shapes {
+  position: absolute; inset: 0; pointer-events: none;
+}
+.hero-bg-shapes span {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.08;
+  background: var(--yellow);
+}
+.hero-bg-shapes span:nth-child(1) { width: 420px; height: 420px; top: -120px; right: -80px; }
+.hero-bg-shapes span:nth-child(2) { width: 220px; height: 220px; bottom: -60px; left: 10%; background: var(--white); }
+.hero-bg-shapes span:nth-child(3) { width: 140px; height: 140px; top: 40px; left: 30%; background: var(--red); opacity: 0.12; }
+
+.hero-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 60px 24px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 40px;
+  width: 100%; position: relative; z-index: 1;
+}
+
+.hero-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,216,53,0.18);
+  border: 1.5px solid var(--yellow);
+  color: var(--yellow);
+  border-radius: 24px;
+  padding: 6px 16px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  animation: fadeDown 0.6s ease both;
+}
+
+.hero-title {
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--white);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 14px;
+  animation: fadeDown 0.7s ease 0.1s both;
+}
+
+.hero-title em {
+  color: var(--yellow);
+  font-style: normal;
+}
+
+.hero-sub {
+  color: rgba(255,255,255,0.82);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  animation: fadeDown 0.7s ease 0.2s both;
+}
+
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeDown 0.7s ease 0.3s both; }
+
+.btn-hero-wa {
+  background: var(--green-wa);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: pulse-btn 2.5s infinite 1s;
+}
+.btn-hero-wa:hover { transform: scale(1.05); box-shadow: 0 10px 32px rgba(37,211,102,0.55); }
+
+.btn-hero-outline {
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  border-radius: 50px;
+  padding: 15px 28px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+.btn-hero-outline:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+
+.hero-badges {
+  display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px;
+  animation: fadeDown 0.7s ease 0.4s both;
+}
+.hero-badge {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px;
+  color: #fff; font-size: 0.82rem; font-weight: 700;
+}
+.hero-badge i { color: var(--yellow); font-size: 1rem; }
+
+.hero-visual {
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeLeft 0.8s ease 0.2s both;
+}
+
+.hero-card-float {
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 24px;
+  padding: 32px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-card-icon {
+  font-size: 5rem;
+  margin-bottom: 12px;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+}
+
+.promo-tag {
+  position: absolute;
+  top: -14px; right: 20px;
+  background: var(--red);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(211,47,47,0.4);
+  animation: bounce-tag 2s ease-in-out infinite;
+}
+
+.hero-offer-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px;
+}
+.hero-offer-item {
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 10px;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex; align-items: center; gap: 6px;
+}
+.hero-offer-item i { color: var(--yellow); }
+
+/* ============ SECTIONS COMMON ============ */
+section { padding: 64px 24px; }
+
+.container { max-width: 1200px; margin: 0 auto; }
+
+.section-label {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 18px; height: 3px;
+  background: var(--yellow);
+  border-radius: 2px;
+}
+
+.section-title {
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--text-dark);
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.section-sub {
+  color: var(--gray-mid);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* ============ TICKER ============ */
+.ticker-bar {
+  background: var(--yellow);
+  padding: 10px 0;
+  overflow: hidden;
+}
+.ticker-track {
+  display: flex; gap: 0;
+  animation: ticker 20s linear infinite;
+  white-space: nowrap;
+}
+.ticker-track span {
+  padding: 0 32px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: var(--blue-dark);
+  display: flex; align-items: center; gap: 10px;
+}
+.ticker-track span i { color: var(--red); }
+
+/* ============ CATEGORIAS ============ */
+#categorias { background: var(--gray-light); }
+
+.cats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+}
+
+.cat-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px 12px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.cat-card:hover {
+  border-color: var(--blue-light);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.cat-icon {
+  width: 58px; height: 58px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.7rem;
+}
+.cat-card span {
+  font-weight: 800;
+  font-size: 0.82rem;
+  color: var(--text-dark);
+}
+
+/* ============ OFERTAS ============ */
+#ofertas { background: var(--white); }
+
+.ofertas-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 32px; flex-wrap: wrap; gap: 16px;
+}
+
+.carousel-wrap { position: relative; overflow: hidden; }
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1.5px solid var(--gray);
+  padding: 0;
+  min-width: 210px;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+.product-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+
+.product-img {
+  height: 150px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem;
+  background: var(--gray-light);
+  position: relative;
+}
+
+.badge-oferta {
+  position: absolute;
+  top: 10px; left: 10px;
+  background: var(--red);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-body { padding: 16px; }
+.product-name { font-weight: 800; font-size: 0.92rem; color: var(--text-dark); margin-bottom: 4px; }
+.product-desc { font-size: 0.78rem; color: var(--gray-mid); margin-bottom: 12px; }
+.product-prices { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.price-old { text-decoration: line-through; color: var(--gray-mid); font-size: 0.82rem; }
+.price-new { font-family: 'Baloo 2', cursive; font-size: 1.4rem; color: var(--red); font-weight: 800; }
+.price-unit { font-size: 0.75rem; color: var(--gray-mid); font-weight: 600; }
+
+.btn-wa-product {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  background: var(--green-wa);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-wa-product:hover { background: var(--green-wa-dark); }
+
+.carousel-btn {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 42px; height: 42px;
+  background: var(--white);
+  border: 1.5px solid var(--gray);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--blue);
+  box-shadow: var(--shadow);
+  z-index: 10;
+  transition: background 0.2s, color 0.2s;
+}
+.carousel-btn:hover { background: var(--blue); color: #fff; }
+.carousel-btn.prev { left: -18px; }
+.carousel-btn.next { right: -18px; }
+
+/* ============ DELIVERY ============ */
+#delivery {
+  background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+}
+
+.delivery-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 60px;
+}
+
+.delivery-steps { display: flex; flex-direction: column; gap: 20px; }
+.delivery-step {
+  display: flex; gap: 16px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(21,101,192,0.08);
+  align-items: flex-start;
+}
+.step-num {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+.step-body strong { display: block; font-weight: 800; color: var(--text-dark); margin-bottom: 4px; }
+.step-body p { font-size: 0.87rem; color: var(--gray-mid); line-height: 1.5; }
+
+.delivery-visual {
+  background: var(--blue-dark);
+  border-radius: 24px;
+  padding: 40px 32px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.delivery-visual::before {
+  content: '';
+  position: absolute; top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  background: rgba(253,216,53,0.1);
+  border-radius: 50%;
+}
+.delivery-emoji { font-size: 4rem; margin-bottom: 16px; display: block; }
+.delivery-visual h3 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.delivery-visual p { opacity: 0.8; font-size: 0.9rem; margin-bottom: 24px; line-height: 1.5; }
+.delivery-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.stat-box {
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.stat-box strong { display: block; font-family: 'Baloo 2', cursive; font-size: 1.6rem; color: var(--yellow); }
+.stat-box span { font-size: 0.78rem; opacity: 0.8; }
+
+.btn-wa-delivery {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--green-wa);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 28px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 24px;
+  transition: background 0.2s, transform 0.15s;
+  position: relative; z-index: 1;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+}
+.btn-wa-delivery:hover { background: var(--green-wa-dark); transform: scale(1.04); }
+
+/* ============ POR QUE NÓS ============ */
+#porque { background: var(--white); }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.why-card {
+  background: var(--gray-light);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.why-card:hover {
+  border-color: var(--blue-light);
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+.why-icon {
+  width: 66px; height: 66px;
+  border-radius: 18px;
+  margin: 0 auto 18px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+}
+.why-card h4 { font-weight: 800; color: var(--text-dark); margin-bottom: 8px; font-size: 1rem; }
+.why-card p { font-size: 0.88rem; color: var(--gray-mid); line-height: 1.5; }
+
+/* ============ DEPOIMENTOS ============ */
+#depoimentos { background: var(--gray-light); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.review-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.review-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.review-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px; left: 20px;
+  font-size: 5rem;
+  color: var(--blue);
+  opacity: 0.1;
+  font-family: 'Baloo 2', cursive;
+  line-height: 1;
+}
+
+.review-stars { color: var(--yellow-dark); font-size: 0.9rem; margin-bottom: 12px; }
+.review-text { font-size: 0.92rem; color: var(--text-body); line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.author-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.author-info strong { display: block; font-weight: 800; font-size: 0.88rem; color: var(--text-dark); }
+.author-info span { font-size: 0.78rem; color: var(--gray-mid); }
+
+/* ============ MAPA ============ */
+#localizacao { background: var(--white); padding-bottom: 0; }
+.map-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-top: 32px;
+}
+.map-wrap iframe { display: block; width: 100%; height: 380px; border: none; }
+
+.location-info-bar {
+  background: var(--blue-dark);
+  color: #fff;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+}
+.loc-item {
+  padding: 20px 28px;
+  display: flex; align-items: center; gap: 14px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.loc-item:last-child { border-right: none; }
+.loc-item i { font-size: 1.4rem; color: var(--yellow); flex-shrink: 0; }
+.loc-item strong { display: block; font-size: 0.88rem; font-weight: 800; margin-bottom: 2px; }
+.loc-item span { font-size: 0.8rem; opacity: 0.78; line-height: 1.4; }
+
+/* ============ FLOATING WA ============ */
+.float-wa {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 999;
+  background: var(--green-wa);
+  color: #fff;
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+  transition: transform 0.2s;
+  animation: pulse-float 2.5s ease-in-out infinite;
+}
+.float-wa:hover { transform: scale(1.1); }
+
+/* ============ FOOTER ============ */
+footer {
+  background: var(--blue-dark);
+  color: rgba(255,255,255,0.85);
+  padding: 56px 24px 24px;
+}
+
+.footer-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px; margin-bottom: 48px;
+}
+
+.footer-brand {}
+.footer-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; margin-bottom: 16px;
+}
+.footer-logo-icon {
+  width: 44px; height: 44px;
+  background: var(--yellow);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--blue-dark);
+}
+.footer-logo-text strong {
+  display: block;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.05rem;
+  color: #fff;
+  font-weight: 800;
+}
+.footer-logo-text span { font-size: 0.65rem; color: var(--yellow); font-weight: 700; text-transform: uppercase; }
+.footer-brand p { font-size: 0.88rem; line-height: 1.6; margin-bottom: 20px; opacity: 0.78; }
+
+.footer-social { display: flex; gap: 10px; }
+.social-btn {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s;
+}
+.social-btn:hover { transform: scale(1.1); }
+.social-wa { background: var(--green-wa); }
+.social-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+footer h5 {
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: flex; align-items: center; gap: 6px;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--yellow); }
+.footer-links a i { font-size: 0.7rem; color: var(--yellow); }
+
+.footer-contact li {
+  display: flex; gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+}
+.footer-contact li i { color: var(--yellow); margin-top: 2px; flex-shrink: 0; }
+
+.footer-hours { display: flex; flex-direction: column; gap: 8px; }
+.hour-item {
+  display: flex; justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 8px;
+}
+.hour-item .day { opacity: 0.7; }
+.hour-item .time { font-weight: 800; color: var(--yellow); }
+
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom p { font-size: 0.82rem; opacity: 0.6; }
+.accept-badges { display: flex; gap: 8px; align-items: center; }
+.accept-badge {
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.7);
+  display: flex; align-items: center; gap: 5px;
+}
+.accept-badge i { color: var(--yellow); }
+
+/* ============ ANIMATIONS ============ */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes pulse-btn {
+  0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.4); }
+  50% { box-shadow: 0 8px 36px rgba(37,211,102,0.65); }
+}
+@keyframes pulse-float {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); }
+  50% { box-shadow: 0 6px 30px rgba(37,211,102,0.75); }
+}
+@keyframes bounce-tag {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .delivery-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+  nav { display: none; }
+  nav.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 70px; left: 0; right: 0;
+    background: var(--white);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 16px 20px;
+    z-index: 999;
+    gap: 4px;
+  }
+  nav.open a { padding: 12px 16px; border-radius: 10px; font-size: 1rem; }
+  .hamburger { display: flex; }
+  .btn-wa-header span { display: none; }
+  .btn-wa-header { padding: 9px 12px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .location-info-bar { grid-template-columns: 1fr; }
+  .loc-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .loc-item:last-child { border-bottom: none; }
+  section { padding: 48px 16px; }
+  .carousel-btn { display: none; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .hero-btns { flex-direction: column; }
+  .btn-hero-wa, .btn-hero-outline { justify-content: center; }
+  .hero-badges { flex-direction: column; }
+  .cats-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.product-card{
+  width: 280px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  position: relative;
+}
+
+.product-card:hover{
+  transform: translateY(-5px);
+}
+
+.product-img{
+  width: 100%;
+  height: 220px;
+  background: #f4f4f4;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* Badge de oferta */
+.badge-oferta{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  background: #ff2e63;
+  color: white;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Corpo do card */
+.product-body{
+  padding: 18px;
+}
+
+.product-name{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-desc{
+  color: #777;
+  margin-bottom: 14px;
+}
+
+.product-prices{
+  margin-bottom: 18px;
+}
+
+.price-old{
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+}
+
+.price-new{
+  font-size: 24px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.price-unit{
+  color: #777;
+}
+
+/* Botão WhatsApp */
+.btn-wa-product{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  padding: 14px;
+
+  background: #25D366;
+  color: white;
+
+  border-radius: 14px;
+  text-decoration: none;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.btn-wa-product:hover{
+  background: #1ebe5d;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo-wrap">
+      <div class="logo-icon">SD</div>
+      <div class="logo-text">
+        <strong>Dionisio</strong>
+        <span>Supermercado</span>
+      </div>
+    </a>
+    <nav id="main-nav">
+      <a href="#inicio">Início</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#localizacao">Localização</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://api.whatsapp.com/send?phone=5588999989333" target="_blank" class="btn-wa-header">
+        <i class="fab fa-whatsapp"></i>
+        <span>Pedir agora</span>
+      </a>
+      <a href="https://instagram.com/supermercadodionisiooficial" target="_blank" class="btn-insta">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" style="padding:0;">
+  <div id="hero">
+    <div class="hero-bg-shapes">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-label">
+          <i class="fas fa-bolt"></i> Delivery em Santa Quitéria
+        </div>
+        <h1 class="hero-title">
+          O melhor lugar<br>para suas <em>compras!</em>
+        </h1>
+        <p class="hero-sub">
+          Produtos frescos, preços imbatíveis e entrega rápida direto na sua porta. Peça agora pelo WhatsApp!
+        </p>
+        <div class="hero-btns">
+          <a href="https://api.whatsapp.com/send?phone=5588999989333" target="_blank" class="btn-hero-wa">
+            <i class="fab fa-whatsapp" style="font-size:1.3rem;"></i>
+            Comprar pelo WhatsApp
+          </a>
+          <a href="#ofertas" class="btn-hero-outline">
+            <i class="fas fa-tag"></i> Ver ofertas
+          </a>
+        </div>
+        <div class="hero-badges">
+          <div class="hero-badge"><i class="fas fa-credit-card"></i> Aceita cartões</div>
+          <div class="hero-badge"><i class="fas fa-clock"></i> Seg–Sáb 7h–21h</div>
+          <div class="hero-badge"><i class="fas fa-motorcycle"></i> Delivery rápido</div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-float">
+          <span class="promo-tag">🔥 Ofertas da semana!</span>
+          <span class="hero-card-icon">🛒</span>
+          <div style="color:#fff;font-weight:800;font-size:1.1rem;margin-bottom:8px;">Supermercado Dionisio</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.82rem;margin-bottom:16px;">Avenida Timbó Muniz, Santa Quitéria</div>
+          <div class="hero-offer-grid">
+            <div class="hero-offer-item"><i class="fas fa-leaf"></i> Hortifruti</div>
+            <div class="hero-offer-item"><i class="fas fa-drumstick-bite"></i> Açougue</div>
+            <div class="hero-offer-item"><i class="fas fa-bread-slice"></i> Padaria</div>
+            <div class="hero-offer-item"><i class="fas fa-wine-bottle"></i> Bebidas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-track" id="ticker">
+    <span><i class="fas fa-fire"></i> Promoções imperdíveis!</span>
+    <span><i class="fas fa-motorcycle"></i> Delivery rápido pelo WhatsApp</span>
+    <span><i class="fas fa-leaf"></i> Hortifruti sempre fresco</span>
+    <span><i class="fas fa-credit-card"></i> Aceitamos cartões</span>
+    <span><i class="fas fa-store"></i> Seg–Sáb 7h às 21h · Dom 7h às 13h</span>
+    <span><i class="fas fa-fire"></i> Promoções imperdíveis!</span>
+    <span><i class="fas fa-motorcycle"></i> Delivery rápido pelo WhatsApp</span>
+    <span><i class="fas fa-leaf"></i> Hortifruti sempre fresco</span>
+    <span><i class="fas fa-credit-card"></i> Aceitamos cartões</span>
+    <span><i class="fas fa-store"></i> Seg–Sáb 7h às 21h · Dom 7h às 13h</span>
+  </div>
+</div>
+
+<!-- CATEGORIAS -->
+<section id="categorias">
+  <div class="container">
+    <div class="section-label reveal">Departamentos</div>
+    <h2 class="section-title reveal reveal-delay-1">Encontre tudo que precisa</h2>
+    <p class="section-sub reveal reveal-delay-2">De hortifruti fresquinho ao açougue, temos tudo para sua família.</p>
+    <div class="cats-grid">
+      <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir do Hortifruti 🥦" target="_blank" class="cat-card reveal">
+        <div class="cat-icon" style="background:#E8F5E9;"><span>🥦</span></div>
+        <span>Hortifruti</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir do Açougue 🥩" target="_blank" class="cat-card reveal reveal-delay-1">
+        <div class="cat-icon" style="background:#FFEBEE;"><span>🥩</span></div>
+        <span>Açougue</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir da Padaria 🍞" target="_blank" class="cat-card reveal reveal-delay-2">
+        <div class="cat-icon" style="background:#FFF8E1;"><span>🍞</span></div>
+        <span>Padaria</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir Bebidas 🥤" target="_blank" class="cat-card reveal reveal-delay-3">
+        <div class="cat-icon" style="background:#E3F2FD;"><span>🥤</span></div>
+        <span>Bebidas</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir de Frios 🧀" target="_blank" class="cat-card reveal">
+        <div class="cat-icon" style="background:#F3E5F5;"><span>🧀</span></div>
+        <span>Frios</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir de Limpeza 🧽" target="_blank" class="cat-card reveal reveal-delay-1">
+        <div class="cat-icon" style="background:#E0F2F1;"><span>🧽</span></div>
+        <span>Limpeza</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir da Mercearia 🥫" target="_blank" class="cat-card reveal reveal-delay-2">
+        <div class="cat-icon" style="background:#FBE9E7;"><span>🥫</span></div>
+        <span>Mercearia</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero ver mais produtos!" target="_blank" class="cat-card reveal reveal-delay-3">
+        <div class="cat-icon" style="background:#EDE7F6;"><span>🛍️</span></div>
+        <span>Mais itens</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTAS -->
+<section id="ofertas">
+  <div class="container">
+    <div class="ofertas-header">
+      <div>
+        <div class="section-label reveal">Promoções</div>
+        <h2 class="section-title reveal reveal-delay-1">Ofertas da semana 🔥</h2>
+        <p class="section-sub reveal reveal-delay-2" style="margin-bottom:0;">Preços especiais por tempo limitado. Corra!</p>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero ver todas as ofertas!" target="_blank" style="text-decoration:none;">
+        <div style="background:var(--blue);color:#fff;padding:12px 22px;border-radius:12px;font-weight:800;font-size:0.88rem;display:flex;align-items:center;gap:8px;white-space:nowrap;">
+          <i class="fab fa-whatsapp"></i> Ver todas as ofertas
+        </div>
+      </a>
+    </div>
+    <div class="carousel-wrap">
+      <button class="carousel-btn prev" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+      <div class="carousel-track" id="carousel-track">
+
+        <div class="product-card">
+          <div class="product-img">🍗 <div class="badge-oferta">-30%</div></div>
+          <div class="product-body">
+            <div class="product-name">Frango Inteiro</div>
+            <div class="product-desc">Kg · Selecionado fresco</div>
+            <div class="product-prices">
+              <span class="price-old">R$ 12,99</span>
+              <span class="price-new">R$ 8,99</span>
+              <span class="price-unit">/kg</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir Frango Inteiro" target="_blank" class="btn-wa-product">
+              <i class="fab fa-whatsapp"></i> Pedir agora
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">🥛 <div class="badge-oferta">Oferta</div></div>
+          <div class="product-body">
+            <div class="product-name">Leite Integral</div>
+            <div class="product-desc">1 litro · Caixa c/ 12un</div>
+            <div class="product-prices">
+              <span class="price-old">R$ 7,49</span>
+              <span class="price-new">R$ 5,99</span>
+              <span class="price-unit">/L</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir Leite Integral" target="_blank" class="btn-wa-product">
+              <i class="fab fa-whatsapp"></i> Pedir agora
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">🍖 <div class="badge-oferta">-25%</div></div>
+          <div class="product-body">
+            <div class="product-name">Carne Bovina</div>
+            <div class="product-desc">Kg · Patinho/Alcatra</div>
+            <div class="product-prices">
+              <span class="price-old">R$ 39,90</span>
+              <span class="price-new">R$ 29,90</span>
+              <span class="price-unit">/kg</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir Carne Bovina" target="_blank" class="btn-wa-product">
+              <i class="fab fa-whatsapp"></i> Pedir agora
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">🍌 <div class="badge-oferta">Fresco</div></div>
+          <div class="product-body">
+            <div class="product-name">Banana Prata</div>
+            <div class="product-desc">Kg · Colhida fresca</div>
+            <div class="product-prices">
+              <span class="price-new">R$ 3,99</span>
+              <span class="price-unit">/kg</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir Banana Prata" target="_blank" class="btn-wa-product">
+              <i class="fab fa-whatsapp"></i> Pedir agora
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">🧃 <div class="badge-oferta">-20%</div></div>
+          <div class="product-body">
+            <div class="product-name">Suco de Caixinha</div>
+            <div class="product-desc">200ml · Vários sabores</div>
+            <div class="product-prices">
+              <span class="price-old">R$ 2,50</span>
+              <span class="price-new">R$ 1,99</span>
+              <span class="price-unit">/un</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir Suco de Caixinha" target="_blank" class="btn-wa-product">
+              <i class="fab fa-whatsapp"></i> Pedir agora
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">🧀 <div class="badge-oferta">Oferta</div></div>
+          <div class="product-body">
+            <div class="product-name">Queijo Mussarela</div>
+            <div class="product-desc">Kg · Fatiado na hora</div>
+            <div class="product-prices">
+              <span class="price-old">R$ 42,00</span>
+              <span class="price-new">R$ 34,90</span>
+              <span class="price-unit">/kg</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir Queijo Mussarela" target="_blank" class="btn-wa-product">
+              <i class="fab fa-whatsapp"></i> Pedir agora
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">🫙 <div class="badge-oferta">-15%</div></div>
+          <div class="product-body">
+            <div class="product-name">Óleo de Soja</div>
+            <div class="product-desc">900ml · Embalagem familiar</div>
+            <div class="product-prices">
+              <span class="price-old">R$ 7,90</span>
+              <span class="price-new">R$ 6,49</span>
+              <span class="price-unit">/un</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero pedir Óleo de Soja" target="_blank" class="btn-wa-product">
+              <i class="fab fa-whatsapp"></i> Pedir agora
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-btn next" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section id="delivery">
+  <div class="container">
+    <div class="delivery-grid">
+      <div>
+        <div class="section-label reveal">Delivery</div>
+        <h2 class="section-title reveal reveal-delay-1">Compre no conforto da sua casa!</h2>
+        <p class="section-sub reveal reveal-delay-2">É simples e rápido. Faça seu pedido diretamente pelo WhatsApp e receba em casa.</p>
+        <div class="delivery-steps">
+          <div class="delivery-step reveal">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Fale conosco pelo WhatsApp</strong>
+              <p>Mande uma mensagem para (88) 9 9998-9333 com os produtos que deseja.</p>
+            </div>
+          </div>
+          <div class="delivery-step reveal reveal-delay-1">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>Confirme seu pedido</strong>
+              <p>Nossa equipe vai montar seu pedido fresquinho e confirmar os preços e disponibilidade.</p>
+            </div>
+          </div>
+          <div class="delivery-step reveal reveal-delay-2">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>Receba em casa!</strong>
+              <p>Entregamos com rapidez e cuidado diretamente na sua porta em Santa Quitéria.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="delivery-visual">
+          <span class="delivery-emoji">🛵</span>
+          <h3>Delivery Rápido!</h3>
+          <p>Atendimento personalizado e ágil para você. Nossa equipe está sempre pronta para te atender!</p>
+          <div class="delivery-stats">
+            <div class="stat-box">
+              <strong>45min</strong>
+              <span>Tempo médio de entrega</span>
+            </div>
+            <div class="stat-box">
+              <strong>100%</strong>
+              <span>Produtos selecionados</span>
+            </div>
+            <div class="stat-box">
+              <strong>5★</strong>
+              <span>Avaliação dos clientes</span>
+            </div>
+            <div class="stat-box">
+              <strong>7h–21h</strong>
+              <span>Atendimento seg–sáb</span>
+            </div>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero fazer um pedido de delivery!" target="_blank" class="btn-wa-delivery">
+            <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i>
+            Pedir agora pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE NÓS -->
+<section id="porque">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Diferenciais</div>
+      <h2 class="section-title reveal reveal-delay-1">Por que comprar conosco?</h2>
+      <p class="section-sub reveal reveal-delay-2">Somos mais que um supermercado — somos parte da família de Santa Quitéria.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon" style="background:#E3F2FD;">💰</div>
+        <h4>Melhores preços</h4>
+        <p>Trabalhamos com preços competitivos para que sua família economize sempre sem abrir mão da qualidade.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon" style="background:#E8F5E9;">🌿</div>
+        <h4>Produtos frescos</h4>
+        <p>Hortifruti colhido fresco, açougue com cortes do dia e padaria quentinha sempre pela manhã.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon" style="background:#FFF8E1;">⚡</div>
+        <h4>Atendimento rápido</h4>
+        <p>Equipe treinada e pronta para te atender com agilidade, seja na loja ou pelo delivery.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon" style="background:#FCE4EC;">❤️</div>
+        <h4>Atendimento familiar</h4>
+        <p>Um atendimento acolhedor e personalizado, como se você fosse da família. Porque você é!</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon" style="background:#F3E5F5;">💳</div>
+        <h4>Aceita cartões</h4>
+        <p>Débito, crédito e outras formas de pagamento para sua comodidade. Compre da forma que preferir.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon" style="background:#E0F2F1;">🏠</div>
+        <h4>Delivery na sua porta</h4>
+        <p>Sem sair de casa! Peça pelo WhatsApp e receba seus produtos com todo o conforto e segurança.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Clientes satisfeitos</div>
+      <h2 class="section-title reveal reveal-delay-1">O que nossos clientes dizem</h2>
+      <p class="section-sub reveal reveal-delay-2">Mais de 500 famílias já confiam no Supermercado Dionisio.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">Melhor supermercado de Santa Quitéria! Os produtos são sempre frescos e os preços são ótimos. O delivery é super rápido, chega em menos de 1 hora!</p>
+        <div class="review-author">
+          <div class="author-avatar" style="background:var(--blue);">MJ</div>
+          <div class="author-info">
+            <strong>Maria José</strong>
+            <span>Cliente há 3 anos</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">Compro sempre pelo WhatsApp e nunca me arrependi! O atendimento é excelente, os produtos chegam direitinho e o açougue é impecável. Super recomendo!</p>
+        <div class="review-author">
+          <div class="author-avatar" style="background:var(--red);">AS</div>
+          <div class="author-info">
+            <strong>Ana Souza</strong>
+            <span>Cliente via delivery</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">O Dionisio tem tudo que preciso para a semana. Preços honestos, atendimento amigável e variedade enorme. É o meu supermercado de confiança!</p>
+        <div class="review-author">
+          <div class="author-avatar" style="background:var(--blue-dark);">PC</div>
+          <div class="author-info">
+            <strong>Pedro Costa</strong>
+            <span>Cliente fiel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section id="localizacao">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Onde estamos</div>
+      <h2 class="section-title reveal reveal-delay-1">Venha nos visitar!</h2>
+      <p class="section-sub reveal reveal-delay-2">Avenida Timbó Muniz, Santa Quitéria — CE</p>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63589.34!2d-40.1457!3d-4.3316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7810040d9d3c4a5%3A0x4d9f5e6f4a3b2c1d!2sSanta%20Quit%C3%A9ria%2C%20CE!5e0!3m2!1spt!2sbr!4v1700000000000"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização Supermercado Dionisio">
+      </iframe>
+      <div class="location-info-bar">
+        <div class="loc-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Endereço</strong>
+            <span>Av. Timbó Muniz, Santa Quitéria – CE</span>
+          </div>
+        </div>
+        <div class="loc-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <strong>Horário</strong>
+            <span>Seg–Sáb: 7h–21h · Dom: 7h–13h</span>
+          </div>
+        </div>
+        <div class="loc-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <strong>Delivery</strong>
+            <span>(88) 9 9998-9333</span>
+          </div>
+        </div>
+        <div class="loc-item">
+          <i class="fas fa-credit-card"></i>
+          <div>
+            <strong>Pagamento</strong>
+            <span>Dinheiro, Débito e Crédito</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="footer-logo">
+        <div class="footer-logo-icon">SD</div>
+        <div class="footer-logo-text">
+          <strong>Supermercado Dionisio</strong>
+          <span>O melhor lugar para suas compras</span>
+        </div>
+      </a>
+      <p>Há anos servindo as famílias de Santa Quitéria com qualidade, variedade e os melhores preços da região. Venha nos visitar ou peça pelo WhatsApp!</p>
+      <div class="footer-social">
+        <a href="https://api.whatsapp.com/send?phone=5588999989333" target="_blank" class="social-btn social-wa" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/supermercadodionisiooficial" target="_blank" class="social-btn social-ig" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h5>Categorias</h5>
+      <ul class="footer-links">
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Hortifruti</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Açougue</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Padaria</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Bebidas</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Frios & Laticínios</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Limpeza</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Mercearia</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Contato</h5>
+      <ul class="footer-links footer-contact">
+        <li>
+          <i class="fab fa-whatsapp"></i>
+          <div>(88) 9 9998-9333</div>
+        </li>
+        <li>
+          <i class="fas fa-map-marker-alt"></i>
+          <div>Av. Timbó Muniz, Santa Quitéria – CE</div>
+        </li>
+        <li>
+          <i class="fab fa-instagram"></i>
+          <div>@supermercadodionisiooficial</div>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Horário de Funcionamento</h5>
+      <div class="footer-hours">
+        <div class="hour-item">
+          <span class="day">Segunda a Sábado</span>
+          <span class="time">7h – 21h</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Domingo</span>
+          <span class="time">7h – 13h</span>
+        </div>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=5588999989333" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:var(--green-wa);color:#fff;padding:12px 20px;border-radius:12px;font-weight:800;font-size:0.88rem;text-decoration:none;transition:background 0.2s;">
+        <i class="fab fa-whatsapp"></i> Fazer pedido agora
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Supermercado Dionisio · Todos os direitos reservados · Santa Quitéria – CE</p>
+    <div class="accept-badges">
+      <div class="accept-badge"><i class="fas fa-credit-card"></i> Crédito</div>
+      <div class="accept-badge"><i class="fas fa-credit-card"></i> Débito</div>
+      <div class="accept-badge"><i class="fas fa-money-bill-wave"></i> Dinheiro</div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WA BUTTON -->
+<a href="https://api.whatsapp.com/send?phone=5588999989333&text=Olá! Quero fazer um pedido 😊" target="_blank" class="float-wa" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+// ── HAMBURGER MENU ──
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('main-nav');
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+document.querySelectorAll('#main-nav a').forEach(a => {
+  a.addEventListener('click', () => nav.classList.remove('open'));
+});
+
+// ── SCROLL REVEAL ──
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+
+// ── CAROUSEL ──
+const track = document.getElementById('carousel-track');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+let currentIndex = 0;
+
+function getCardWidth() {
+  const card = track.querySelector('.product-card');
+  if (!card) return 230;
+  return card.offsetWidth + 20;
+}
+
+function getVisible() {
+  return Math.floor(track.parentElement.offsetWidth / getCardWidth());
+}
+
+function totalCards() {
+  return track.querySelectorAll('.product-card').length;
+}
+
+function updateCarousel() {
+  const maxIndex = Math.max(0, totalCards() - getVisible());
+  if (currentIndex > maxIndex) currentIndex = maxIndex;
+  track.style.transform = `translateX(-${currentIndex * getCardWidth()}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  const maxIndex = Math.max(0, totalCards() - getVisible());
+  if (currentIndex < maxIndex) currentIndex++;
+  else currentIndex = 0;
+  updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) currentIndex--;
+  else currentIndex = Math.max(0, totalCards() - getVisible());
+  updateCarousel();
+});
+
+// Auto-advance
+setInterval(() => {
+  const maxIndex = Math.max(0, totalCards() - getVisible());
+  if (currentIndex < maxIndex) currentIndex++;
+  else currentIndex = 0;
+  updateCarousel();
+}, 4000);
+
+// Touch swipe
+let startX = 0;
+track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+track.addEventListener('touchend', e => {
+  const diff = startX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 40) {
+    if (diff > 0) nextBtn.click();
+    else prevBtn.click();
+  }
+});
+
+// ── HEADER SCROLL SHADOW ──
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').style.boxShadow =
+    window.scrollY > 10 ? '0 4px 24px rgba(21,101,192,0.15)' : '0 2px 16px rgba(21,101,192,0.12)';
+});
+</script>
+</body>
+</html>
